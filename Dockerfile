@@ -1,11 +1,9 @@
-FROM node:12-alpine
-
-RUN npm i -g yarn
+FROM node:14-alpine
 
 # Install deps for awscli
-RUN apk -Uuv add --no-cache groff less python python-dev py-pip ca-certificates
+RUN apk -Uuv add --no-cache groff less python3 python3-dev py3-pip ca-certificates
 
-RUN pip install awscli
+RUN pip3 install awscli
 
 WORKDIR /app
 
