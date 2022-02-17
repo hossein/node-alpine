@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:16-alpine
 
 # Install deps for awscli
 RUN apk -Uuv add --no-cache groff less python3 python3-dev py3-pip ca-certificates
